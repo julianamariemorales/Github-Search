@@ -5,3 +5,8 @@ Angular JS Github Search
   * display user's repositories
   * provide information about each repository once clicked
   
+Instructions
+-----------
+Run using index.html
+
+Special thanks to html5 up - https://html5up.net/stellar
