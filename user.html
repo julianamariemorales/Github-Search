@@ -1,0 +1,91 @@
+<!-- Wrapper -->
+<div id="wrapper">
+  <div id="main">
+
+  <!-- Introduction -->
+  <!-- User main info-->
+
+    <section id="intro" class="main">
+      <div class="spotlight">
+        <div class="content">
+          <header class="major">
+            <h2>Github Info for {{user.name}}</h2>
+          </header>
+
+          <div class={{message}} role="alert">
+            <span class="sr-only">Success:</span>
+            {{success}}
+            <span class="sr-only">Error:</span>
+            {{error}}
+          </div>
+
+          <p>
+            Name: {{user.name}}
+            <br>
+            Location: {{user.location}}
+            <br>
+            Code Repositories: {{user.public_repos}}
+            <br>
+
+          </p>
+          <ul class="actions">
+            <li><a href="generic.html" class="button">Learn More</a></li>
+          </ul>
+        </div>
+        <span class="image"><img ng-src = "{{user.avatar_url}}" title = "{{user.name}}"></span>
+      </div>
+    </section>
+
+</div>
+<br> <br>
+<!-- First Section -->
+  <section id="first" class="main special">
+    <header class="major">
+      <h2>Repositories</h2>
+      <h3 ng-model "userloginname">{{user.login}}</h3>
+    </header>
+
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Search" ng-model = "language"> </input>
+    </div>
+
+    <ul class="actions">
+      <li><a type="submit"  class="button">Search language type</a></li>
+    </ul>
+
+    <!-- RepositoriesTable -->
+    <div class="table-wrapper">
+      <table class="alt">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Language</th>
+          </tr>
+       </thead>
+         <tbody>
+           <tr ng-repeat = "repo in repos | filter: language">
+             <th scope="row"></th>
+             <td> <a href="#/repos/{{user.login}}/{{repo.name}}">
+               {{repo.name}}</a></td>
+             <td>{{repo.description}}</td>
+             <td>{{repo.language}}</td>
+           </tr>
+         </tbody>
+       </table>
+     </div>
+
+    </section>
+    <p class="copyright">&copy; Untitled. Design: <a href="#">julianamariemorales</a>.</p>
+  </footer>
+
+
+</div> <!--end of wrapper-->
+
+<!--go back-->
+<nav aria-label="...">
+  <ul class="pager">
+    <li class="previous"><a href="#/main"><span aria-hidden="true">&larr;</span> Back to Search</a></li>
+  </ul>
+</nav>
