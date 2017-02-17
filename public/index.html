@@ -35,6 +35,25 @@
      <!-- BG -->
        <div id="bg"></div>
 
+       <!--firebase-->
+       <script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
+       <script src="https://www.gstatic.com/firebasejs/3.6.9/firebase-app.js"></script>
+       <script src="https://www.gstatic.com/firebasejs/3.6.9/firebase-auth.js"></script>
+       <script src="https://www.gstatic.com/firebasejs/3.6.9/firebase-database.js"></script>
+       <script src="https://www.gstatic.com/firebasejs/3.6.9/firebase-messaging.js"></script>
+
+        <script>
+          // Initialize Firebase
+          var config = {
+            apiKey: "AIzaSyDQviRnUJWrA9qFYxmRZsfOc8XnWJTxS7U",
+            authDomain: "github-search-68d5c.firebaseapp.com",
+            databaseURL: "https://github-search-68d5c.firebaseio.com",
+            storageBucket: "github-search-68d5c.appspot.com",
+            messagingSenderId: "129880484742"
+            };
+            firebase.initializeApp(config);
+        </script>
+
       <!-- angular and model -->
       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
       <script src= "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-route.js"> </script>
