@@ -11,6 +11,9 @@ Angular JS Github Search
   * display user's repositories
   * provide information about each repository once clicked
 
+## Currently working on
+  * adding unit tests
+
 Instructions
 -----------
 Run using index.html
